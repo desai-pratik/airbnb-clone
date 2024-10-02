@@ -17,7 +17,7 @@ const Navbar = () => {
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   });
-  
+
   const onRant = useCallback(() => {
     rantModal.onOpen();
   }, [loginModal, rantModal]);
@@ -45,7 +45,7 @@ const Navbar = () => {
             <div className="relative">
               <div className="flex flex-row items-center gap-3">
                 <div
-                 onClick={onRant}
+                  onClick={onRant}
                   className="hidden md:block text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer"
                 >
                   Airbnb your home
@@ -82,7 +82,6 @@ const Navbar = () => {
         </div>
       </div>
       <Categories />
-
     </div>
   );
 };

@@ -12,6 +12,7 @@ import CategoryInput from "../input/CategoryInput";
 import CountrySelect from "../input/CountrySelect";
 import Counter from "../input/Counter";
 import Map from '../Map'
+import ImageUpload from "../input/ImageUpload";
 
 const STEPS = {
   CATEGORY: 0,
@@ -160,14 +161,14 @@ const RantModal = () => {
     );
   }
 
-  // if (step === STEPS.IMAGE) {
-  //   bodyContent = (
-  //     <div className="flex flex-col gap-8">
-  //       <Heading title="Add a photo of your place" subtitle="Show guests what your place looks like!" />
-  //       <ImageUpload onChange={(value) => setCustomValue("imageSrc", value)} value={imageSrc} />
-  //     </div>
-  //   );
-  // }
+  if (step === STEPS.IMAGE) {
+    bodyContent = (
+      <div className="flex flex-col gap-8">
+        <Heading title="Add a photo of your place" subtitle="Show guests what your place looks like!" />
+        <ImageUpload onChange={(value) => setCustomValue("imageSrc", value)} value={imageSrc} />
+      </div>
+    );
+  }
 
   if (step === STEPS.DESCRIPTION) {
     bodyContent = (
